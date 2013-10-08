@@ -15,8 +15,8 @@
         <![endif]-->
     </head>
 
-    <body>
-        <div class="container">
+    <body ng-app>
+        <div class="container" ng-controller="WineController">
             <section>
                 <h1>Wine Application</h1>
                 <div class="panel panel-default">
@@ -30,27 +30,9 @@
                             <th>Year</th>
                             <th></th>
                         </tr>
-                        <tr>
-                            <td>LILLY BOOT</td>
-                            <td>2012</td>
-                            <td>
-                                <button type="button" class="btn btn-default btn-sm pull-right">
-                                    <span class="glyphicon glyphicon-trash"></span>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>ROOKS</td>
-                            <td>2012</td>
-                            <td>
-                                <button type="button" class="btn btn-default btn-sm pull-right">
-                                    <span class="glyphicon glyphicon-trash"></span>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>HESKETH</td>
-                            <td>2009</td>
+                        <tr ng-repeat="wine in wines">
+                            <td>{{ wine.name }}</td>
+                            <td>{{ wine.year }}</td>
                             <td>
                                 <button type="button" class="btn btn-default btn-sm pull-right" data-toggle="modal" href="#myModal">
                                     <span class="glyphicon glyphicon-trash"></span>
@@ -83,5 +65,7 @@
 
         <script src="static/js/lib/jquery-2.0.3.min.js"></script>
         <script src="static/js/lib/bootstrap.min.js"></script>
+        <script src="static/js/lib/angular.min.js"></script>
+        <script src="static/js/wine-controller.js"></script>
     </body>
 </html>
