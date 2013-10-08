@@ -52,7 +52,7 @@
                             <td>HESKETH</td>
                             <td>2009</td>
                             <td>
-                                <button type="button" class="btn btn-default btn-sm pull-right">
+                                <button type="button" class="btn btn-default btn-sm pull-right" data-toggle="modal" href="#myModal">
                                     <span class="glyphicon glyphicon-trash"></span>
                                 </button>
                             </td>
@@ -60,7 +60,26 @@
                     </table>
                 </div>
             </section>
-        </div>
+
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <div id="alert" class="alert alert-danger">
+                        <h4>แน่จริงมึงลบสิ แสรดดด</h4>
+                        <p>ลบแล้วมันจะหายไปชั่วฟ้าดินสลาย ใครก็ช่วยมุงไม่ได้</p>
+                    </div>
+                  </div>
+                  
+                  <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">ลบแม่ม!</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal" aria-hidden="true">ล้อเล่นแสรด</button>
+                  </div>
+
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+        </div> <!-- .container -->
 
         <script src="static/js/lib/jquery-2.0.3.min.js"></script>
         <script src="static/js/lib/bootstrap.min.js"></script>
