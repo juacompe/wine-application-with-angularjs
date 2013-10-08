@@ -14,6 +14,7 @@ describe('WineController', function() {
         describe('first wine', function() {
             it('should be LILLY BOOT, 2012', function() {
                 var firstWine = $scope.wines[0];
+                expect(firstWine.id).toEqual(1);
                 expect(firstWine.name).toEqual('LILLY BOOT');
                 expect(firstWine.year).toEqual(2012);
             });
@@ -22,6 +23,7 @@ describe('WineController', function() {
         describe('second wine', function() {
             it('should be LILLY BOOT, 2012', function() {
                 var secondWine = $scope.wines[1];
+                expect(secondWine.id).toEqual(2);
                 expect(secondWine.name).toEqual('ROOKS');
                 expect(secondWine.year).toEqual(2012);
             });
@@ -30,12 +32,12 @@ describe('WineController', function() {
         describe('third wine', function() {
             it('should be LILLY BOOT, 2012', function() {
                 var thirdWine = $scope.wines[2];
+                expect(thirdWine.id).toEqual(3);
                 expect(thirdWine.name).toEqual('HESKETH');
                 expect(thirdWine.year).toEqual(2009);
             });
         });
-
-    });
+    }); // initialize
 
 });
 
