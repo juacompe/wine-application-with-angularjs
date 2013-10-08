@@ -16,35 +16,53 @@
     </head>
 
     <body>
-        <section>
-            <h1>Wine Application</h1>
-            <div class="panel panel-default">
-                <!-- Default panel contents -->
-                <div class="panel-heading">Wine list</div>
-  
-                <!-- Table -->
-                <table class="table">
-                    <tr>
-                        <th>Name</th>
-                        <th>Year</th>
-                    </tr>
-                    <tr>
-                        <td>LILLY BOOT</td>
-                        <td>2012</td>
-                    </tr>
-                    <tr>
-                        <td>ROOKS</td>
-                        <td>2012</td>
-                    </tr>
-                    <tr>
-                        <td>HESKETH</td>
-                        <td>2009</td>
-                    </tr>
-                </table>
-            </div>
+        <div class="container">
+            <section>
+                <h1>Wine Application</h1>
+                <div class="panel panel-default">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading">List of tasty wines!</div>
+      
+                    <!-- Table -->
+                    <table class="table">
+                        <tr>
+                            <th>Name</th>
+                            <th>Year</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>LILLY BOOT</td>
+                            <td>2012</td>
+                            <td>
+                                <button type="button" class="btn btn-default btn-sm">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ROOKS</td>
+                            <td>2012</td>
+                            <td>
+                                <button type="button" class="btn btn-default btn-sm">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>HESKETH</td>
+                            <td>2009</td>
+                            <td>
+                                <button type="button" class="btn btn-default btn-sm">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        </div>
 
-          <script src="static/js/lib/jquery-2.0.3.min.js"></script>
-          <script src="static/js/lib/bootstrap.min.js"></script>
-        </section>
+        <script src="static/js/lib/jquery-2.0.3.min.js"></script>
+        <script src="static/js/lib/bootstrap.min.js"></script>
     </body>
 </html>
