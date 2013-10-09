@@ -1,6 +1,8 @@
 <h1>Wine Detail</h1>
 <div class="panel panel-default">
   <div class="panel-body">
+    <div class="alert alert-success" ng-show="successMessage">{{ successMessage }}</div>
+    <div class="alert alert-danger" ng-show="errorMessage">{{ errorMessage }}</div>
     <form class="form-horizontal" role="form">
         <div class="form-group">
             <label for="name" class="col-lg-2 control-label">Name</label>

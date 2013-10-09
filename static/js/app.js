@@ -6,7 +6,7 @@ wineApp.config(function($routeProvider) {
         templateUrl: 'list.html',
     }).
     when('/wine/new', {
-        controller: WineController,
+        controller: CreateController,
         templateUrl: 'detail.html',
     }).
     otherwise({ redirectTo: '/wines' });
