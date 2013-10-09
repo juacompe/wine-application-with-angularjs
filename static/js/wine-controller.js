@@ -32,6 +32,7 @@ function WineController($scope) {
         config = {
             message: message,
             buttons: buttons,
+            closeButton: false,
         };
         bootbox.dialog(config);
     };
