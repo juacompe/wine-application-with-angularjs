@@ -1,20 +1,18 @@
 function WineController($scope, WinesService) {
-    $scope.wines = [
-        {id: 1, name: 'LILLY BOOT', year: 2012},
-        {id: 2, name: 'ROOKS', year: 2012},
-        {id: 3, name: 'HESKETH', year: 2009},
-    ]; 
+    $scope.winery = {
+        wines: []
+    };
 
     $scope.initWines = function() {
-        result = WinesService.get();
-        //$scope.wines = result.wines;
+        $scope.winery = WinesService.get();
     };
 
     $scope.deleteById = function(wineId) {
-        var wine;
-        wine = _.findWhere($scope.wines, { id: wineId });
-        wineIndex = _.indexOf($scope.wines, wine);
-        $scope.wines.splice(wineIndex, 1);
+        var wine, wines;
+        wines = $scope.winery.wines;
+        wine = _.findWhere(wines, { id: wineId });
+        wineIndex = _.indexOf(wines, wine);
+        wines.splice(wineIndex, 1);
     };
 
     $scope.deleteButtonPressed = function(wineId) {
