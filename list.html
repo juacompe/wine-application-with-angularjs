@@ -10,13 +10,17 @@
                 <tr>
                     <th>Name</th>
                     <th>Year</th>
-                    <th></th>
+                    <th>
+                        <a href="#/wine/new" class="btn btn-success btn-sm pull-right">
+                            <span class="glyphicon glyphicon-plus"></span>
+                        </a>
+                    </th>
                 </tr>
                 <tr ng-repeat="wine in wines">
                     <td>{{ wine.name }}</td>
                     <td>{{ wine.year }}</td>
                     <td>
-                        <a class="btn btn-default btn-sm pull-right" ng-click="deleteButtonPressed(wine.id)">
+                        <a class="btn btn-danger btn-sm pull-right" ng-click="deleteButtonPressed(wine.id)">
                             <span class="glyphicon glyphicon-trash"></span>
                         </a>
                     </td>
