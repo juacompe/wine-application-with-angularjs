@@ -5,7 +5,13 @@ describe('WineController', function() {
         $scope = $rootScope.$new();
         $controller('WineController', {
             $scope: $scope,
+            WinesService: null, 
         });
+        $scope.wines = [
+            {id: 1, name: 'LILLY BOOT', year: 2012},
+            {id: 2, name: 'ROOKS', year: 2012},
+            {id: 3, name: 'HESKETH', year: 2009},
+        ];
     }));
 
     it('should have 3 items after initialized', function() {

@@ -1,4 +1,4 @@
-wineApp = angular.module('WineApplication', []);
+wineApp = angular.module('WineApplication', ['ngResource']);
 wineApp.config(function($routeProvider) {
     $routeProvider.
     when('/wines', {
@@ -7,5 +7,5 @@ wineApp.config(function($routeProvider) {
     }).
     otherwise({ redirectTo: '/wines' });
 });
-
+wineApp.factory('WinesService', WinesService);
 

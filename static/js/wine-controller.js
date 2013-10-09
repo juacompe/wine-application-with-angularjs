@@ -1,9 +1,14 @@
-function WineController($scope) {
+function WineController($scope, WinesService) {
     $scope.wines = [
         {id: 1, name: 'LILLY BOOT', year: 2012},
         {id: 2, name: 'ROOKS', year: 2012},
         {id: 3, name: 'HESKETH', year: 2009},
     ]; 
+
+    $scope.initWines = function() {
+        result = WinesService.get();
+        //$scope.wines = result.wines;
+    };
 
     $scope.deleteById = function(wineId) {
         var wine;

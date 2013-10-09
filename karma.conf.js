@@ -32,7 +32,8 @@ module.exports = function(karma) {
 
     // list of files to exclude
     exclude: [
-      
+    'static/js/app.js',
+    'static/js/services.js',
     ],
 
 
