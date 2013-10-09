@@ -1,0 +1,28 @@
+<div class="container">
+    <section>
+        <h1>Wine Application</h1>
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">List of tasty wines!</div>
+
+            <!-- Table -->
+            <table class="table">
+                <tr>
+                    <th>Name</th>
+                    <th>Year</th>
+                    <th></th>
+                </tr>
+                <tr ng-repeat="wine in wines">
+                    <td>{{ wine.name }}</td>
+                    <td>{{ wine.year }}</td>
+                    <td>
+                        <a class="btn btn-default btn-sm pull-right" ng-click="deleteButtonPressed(wine.id)">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+</div> <!-- .container -->
+
