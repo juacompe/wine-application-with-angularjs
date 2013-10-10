@@ -1,0 +1,45 @@
+<h1>Wine Detail</h1>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="alert alert-success" ng-show="successMessage">{{ successMessage }}</div>
+    <div class="alert alert-danger" ng-show="errorMessage">{{ errorMessage }}</div>
+    <form class="form-horizontal" role="form" ng-submit="saveButtonPressed()">
+        <div class="form-group">
+            <label for="name" class="col-lg-2 control-label">Name</label>
+            <div class="col-lg-10">
+                <input type="text" id="name" class="form-control" ng-model="name" placeholder="Name"></input>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="country" class="col-lg-2 control-label">Country</label>
+            <div class="col-lg-10">
+                <input type="text" id="country" class="form-control" ng-model="country" placeholder="Country"></input>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="grapes" class="col-lg-2 control-label">Grapes</label>
+            <div class="col-lg-10">
+                <input type="text" id="grapes" class="form-control" ng-model="grapes" placeholder="Grapes"></input>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="region" class="col-lg-2 control-label">Region</label>
+            <div class="col-lg-10">
+                <input type="text" id="region" class="form-control" ng-model="region" placeholder="Region"></input>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="note" class="col-lg-2 control-label">Note</label>
+            <div class="col-lg-10">
+                <textarea id="note" rows="3" class="form-control" ng-model="note" placeholder="Note"></textarea>
+            </div>
+        </div>
+
+        <div class="pull-right">
+            <button type="submit" class="btn btn-success">Save</button>
+            <a href="#/wines" class="btn btn-default">Cancel</a>
+        </div>
+    </form>
+  </div> <!-- .panel-body -->
+</div> <!-- .panel -->
+

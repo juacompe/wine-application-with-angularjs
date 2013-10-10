@@ -1,0 +1,32 @@
+<div ng-init="initWines()">
+    <section>
+        <h1>Wine Application</h1>
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">List of tasty wines!</div>
+
+            <!-- Table -->
+            <table class="table">
+                <tr>
+                    <th>Name</th>
+                    <th>Year</th>
+                    <th>
+                        <a href="#/wine/new" class="btn btn-success btn-sm pull-right">
+                            <span class="glyphicon glyphicon-plus"></span>
+                        </a>
+                    </th>
+                </tr>
+                <tr ng-repeat="wine in winery.wines">
+                    <td>{{ wine.name }}</td>
+                    <td>{{ wine.year }}</td>
+                    <td>
+                        <a class="btn btn-danger btn-sm pull-right" ng-click="deleteButtonPressed(wine.id)">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+</div> <!-- .container -->
+
