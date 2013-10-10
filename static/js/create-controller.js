@@ -1,5 +1,6 @@
 function CreateController($scope, WinesService) {
     $scope.name = '';
+    $scope.year = '';
     $scope.country = '';
     $scope.grapes = '';
     $scope.region = '';
@@ -11,6 +12,7 @@ function CreateController($scope, WinesService) {
     $scope.saveButtonPressed = function() {
         var wine = new WinesService(); 
         wine.name = $scope.name;
+        wine.year = $scope.year;
         wine.country = $scope.country;
         wine.grapes = $scope.grapes;
         wine.region = $scope.region;
@@ -23,6 +25,7 @@ function CreateController($scope, WinesService) {
 
     $scope.clearFields = function() {
         $scope.name = '';
+        $scope.year = '';
         $scope.country= '';
         $scope.grapes = '';
         $scope.region = '';

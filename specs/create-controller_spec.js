@@ -11,6 +11,7 @@ describe('CreateController', function() {
 
     it('should have all fields empty by default', function() {
         expect($scope.name).toEqual('');
+        expect($scope.year).toEqual('');
         expect($scope.country).toEqual('');
         expect($scope.grapes).toEqual('');
         expect($scope.region).toEqual('');
@@ -28,12 +29,14 @@ describe('CreateController', function() {
     it('should have all fields cleared after clearFields', function() {
         var empty = '';
         $scope.name = 'BILLY BOOT';
+        $scope.year = '2010';
         $scope.country = 'Australia';
         $scope.grapes = 'Chardonnay';
         $scope.region = '-';
         $scope.note = 'Fresh, tropical fruit flavours and aromas, this Chardonnay is soft and round with a bright finish.';
         $scope.clearFields();
         expect($scope.name).toBe(empty);
+        expect($scope.year).toBe(empty);
         expect($scope.country).toBe(empty);
         expect($scope.grapes).toBe(empty);
         expect($scope.region).toBe(empty);

@@ -2,6 +2,7 @@ describe('EditController', function() {
     var $scope;
     var wine = {
         name: 'Hello!',
+        year: '2010',
         country: 'Australia',
         grapes: 'Just testing',
         region: 'Victoria',
@@ -19,6 +20,7 @@ describe('EditController', function() {
     it('should have all fields equal to the given wine when loaded', function() {
         $scope.load(wine);
         expect($scope.name).toEqual(wine.name);
+        expect($scope.year).toEqual(wine.year);
         expect($scope.country).toEqual(wine.country);
         expect($scope.grapes).toEqual(wine.grapes);
         expect($scope.region).toEqual(wine.region);

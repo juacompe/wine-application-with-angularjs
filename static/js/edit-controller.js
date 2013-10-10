@@ -7,6 +7,7 @@ function EditController($scope, $routeParams, WinesService) {
 
     $scope.load = function(wine) {
         $scope.name = wine.name;
+        $scope.year = wine.year;
         $scope.country = wine.country;
         $scope.grapes = wine.grapes;
         $scope.region = wine.region;
