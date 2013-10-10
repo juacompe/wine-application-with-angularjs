@@ -9,6 +9,10 @@ wineApp.config(function($routeProvider) {
         controller: CreateController,
         templateUrl: 'detail.html',
     }).
+    when('/wine/:id', {
+        controller: EditController,
+        templateUrl: 'detail.html',
+    }).
     otherwise({ redirectTo: '/wines' });
 });
 wineApp.factory('WinesService', WinesService);
