@@ -5,6 +5,7 @@ Release Note
 ----
 1. [feature] wine listing
 1. [feature] add wine
+1. [feature] view wine detail
 
 Run Test
 ----
