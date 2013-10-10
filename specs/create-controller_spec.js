@@ -24,5 +24,20 @@ describe('CreateController', function() {
     it('should have error message as empty by default', function() {
         expect($scope.errorMessage).toEqual('');
     });
+
+    it('should have all fields cleared after clearFields', function() {
+        var empty = '';
+        $scope.name = 'BILLY BOOT';
+        $scope.country = 'Australia';
+        $scope.grapes = 'Chardonnay';
+        $scope.region = '-';
+        $scope.note = 'Fresh, tropical fruit flavours and aromas, this Chardonnay is soft and round with a bright finish.';
+        $scope.clearFields();
+        expect($scope.name).toBe(empty);
+        expect($scope.country).toBe(empty);
+        expect($scope.grapes).toBe(empty);
+        expect($scope.region).toBe(empty);
+        expect($scope.note).toBe(empty);
+    });
 });
 
